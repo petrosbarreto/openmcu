@@ -1,4 +1,4 @@
-window.l_welcome = 'OpenMCU-ru';
+window.l_welcome = 'OpenMCU-10rm';
 window.l_status = 'Status';
 
 window.l_connections = 'Connections';
@@ -69,10 +69,10 @@ window.l_support = 'Support';
 
 window.l_info_welcome ='\
 <p>\
-Service OpenMCU-ru is running and accepting connections.\
+Service OpenMCU-10rm is running and accepting connections.\
 </p>\
 <p>\
-Conference started by connection from some terminal will work in unmanaged mode. All members will see the same picture. In unmanaged mode OpenMCU-ru automatically change layout depending on number of conference members, in order  from file "layouts.conf". After connecting 100 members other connecting members will not be visible, but will see others.<br />\
+Conference started by connection from some terminal will work in unmanaged mode. All members will see the same picture. In unmanaged mode OpenMCU-10rm automatically change layout depending on number of conference members, in order  from file "layouts.conf". After connecting 100 members other connecting members will not be visible, but will see others.<br />\
 Audio streams in unmanaged mode are transmitting and receiving from all connected members.<br />\
 </p>\
 <p>\
@@ -259,7 +259,7 @@ window.l_startdatetime                             = "Start Date/Time";
 ///
 window.l_restore_defaults                          = "RESTORE DEFAULTS";
 window.l_language                                  = "Language";
-window.l_server_id                                 = "OpenMCU-ru Server Id";
+window.l_server_id                                 = "OpenMCU-10rm Server Id";
 window.l_default_protocol_for_outgoing_calls       = "Default protocol for outgoing calls";
 window.l_http_secure                               = "HTTP secure";
 window.l_http_certificate                          = "HTTP certificate";

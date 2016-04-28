@@ -1,6 +1,6 @@
 
 AC_PLUGIN_DIR=codecs/audio
-prefix=/opt/openmcu-ru/lib/ptlib
+prefix=/opt/openmcu-10rm/lib/ptlib
 
 SONAME	= g7231
 
@@ -13,8 +13,8 @@ LDSO	 	=-shared -Wl,-soname,$(SONAME)
 PLUGINEXT	=so
 CFLAGS	       +=-g -O2 
 STDCCFLAGS     +=-fPIC -D__STDC_CONSTANT_MACROS
-LDFLAGS	       +=-L/opt/openmcu-ru/lib -lavutil -lavcodec
-CPPFLAGS       +=-I/opt/openmcu-ru/include
+LDFLAGS	       +=-L/opt/openmcu-10rm/lib -lavutil -lavcodec
+CPPFLAGS       +=-I/opt/openmcu-10rm/include
 OPTCCFLAGS      =$(CPPFLAGS)
 
 SRCS	+= g7231codec.cxx

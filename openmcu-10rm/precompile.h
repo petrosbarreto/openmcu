@@ -2,9 +2,9 @@
 #ifndef _MCU_PRECOMPILE_H
 #define _MCU_PRECOMPILE_H
 
-#define	PRODUCT_NAME_TEXT	"OpenMCU-ru"
-#define	EXE_NAME_TEXT	        "openmcu-ru"
-#define	MANUFACTURER_TEXT	"OpenMCU-ru Team"
+#define	PRODUCT_NAME_TEXT	"OpenMCU-10RM"
+#define	EXE_NAME_TEXT	        "openmcu-10rm"
+#define	MANUFACTURER_TEXT	"STI 10 RM"
 
 // msvc warnings
 #ifdef _WIN32

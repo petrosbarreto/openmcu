@@ -5,18 +5,18 @@
 #
 # Начало трансляции в сеть
 # To start broadcasting network
-# /opt/openmcu-ru/scripts/web_stream_start name_room
+# /opt/openmcu-10rm/scripts/web_stream_start name_room
 #
 # Открыть, например vlc плеером
 # Open for example vlc player
 # http://ip-adress:8090/stream.asx
 #
 
-DIR_BIN="/opt/openmcu-ru/bin"
-DIR_CONF="/opt/openmcu-ru/config"
-DIR_PIPE="/opt/openmcu-ru/pipe"
+DIR_BIN="/opt/openmcu-10rm/bin"
+DIR_CONF="/opt/openmcu-10rm/config"
+DIR_PIPE="/opt/openmcu-10rm/pipe"
 
-export LD_LIBRARY_PATH="/opt/openmcu-ru/lib"
+export LD_LIBRARY_PATH="/opt/openmcu-10rm/lib"
 
 $DIR_BIN/ffserver -f $DIR_CONF/ffserver.conf &
 

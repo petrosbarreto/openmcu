@@ -9,7 +9,7 @@ Name "OpenMCU-ru"
 
 ;--------------------------------
 
-OutFile "openmcu-ru-VERSION-win32_setup.exe"
+OutFile "openmcu-10rm-VERSION-win32_setup.exe"
 
 SetCompressor lzma
 
@@ -33,10 +33,10 @@ Var StartMenuFolder
 
 ; Pages
 
-!define MUI_ICON "openmcu-ru\share\mcu.ico"
+!define MUI_ICON "openmcu-10rm\share\mcu.ico"
 !define MUI_LICENSEPAGE_TEXT_BOTTOM "$(LicenseText)"
 !define MUI_LICENSEPAGE_BUTTON "$(LicenseNext)"
-!insertmacro MUI_PAGE_LICENSE "openmcu-ru\COPYING"
+!insertmacro MUI_PAGE_LICENSE "openmcu-10rm\COPYING"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -100,7 +100,7 @@ SectionIn 1 2 RO
 
   SetOutPath "$INSTDIR"
 
-  File /r "openmcu-ru\*.*"
+  File /r "openmcu-10rm\*.*"
 
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenMCU-ru" "DisplayName" "$(DisplayName)"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenMCU-ru" "UninstallString" "$INSTDIR\uninstall.exe"
@@ -134,13 +134,21 @@ SectionIn 1 2
 
   SetOutPath "$INSTDIR"
 
-  File vcredist_2010_x86_sp1.exe
-  ExecWait "$INSTDIR\vcredist_2010_x86_sp1.exe /passive"
+  File vcredist_2005_x86.exe
+  ExecWait "$INSTDIR\vcredist_2005_x86.exe /Q"
   ${If} ${Errors}
-    MessageBox MB_ICONSTOP "$(ErrorOn) Microsoft Visual C++ redistributable 2010 SP1"
+    MessageBox MB_ICONSTOP "$(ErrorOn) Microsoft Visual C++ redistributable 2005"
     Quit
   ${EndIf}
-  Delete "$INSTDIR\vcredist_2010_x86_sp1.exe"
+  Delete "$INSTDIR\vcredist_2005_x86.exe"
+
+  File vcredist_2010_x86.exe
+  ExecWait "$INSTDIR\vcredist_2010_x86.exe /passive"
+  ${If} ${Errors}
+    MessageBox MB_ICONSTOP "$(ErrorOn) Microsoft Visual C++ redistributable 2010"
+    Quit
+  ${EndIf}
+  Delete "$INSTDIR\vcredist_2010_x86.exe"
 
 SectionEnd
 

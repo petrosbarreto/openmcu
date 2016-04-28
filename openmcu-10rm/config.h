@@ -10,7 +10,7 @@
   #define BOOL PBoolean
 #endif
 
-#define MCU_PLUGIN_DIR "/opt/openmcu-ru/lib/ptlib"
+#define MCU_PLUGIN_DIR "/opt/openmcu-10rm/lib/ptlib"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // H323Plus
@@ -34,21 +34,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // specify the path executable files
-#define SYS_BIN_DIR "/opt/openmcu-ru/bin"
+#define SYS_BIN_DIR "/opt/openmcu-10rm/bin"
 // specify the path for .conf files
-#define SYS_CONFIG_DIR "/opt/openmcu-ru/config"
+#define SYS_CONFIG_DIR "/opt/openmcu-10rm/config"
 // specify the path for audio&video export via named pipes (linux, freebsd)
-#define SYS_PIPE_DIR "/opt/openmcu-ru/pipe"
+#define SYS_PIPE_DIR "/opt/openmcu-10rm/pipe"
 // specify the path for built-in web server resources
-#define SYS_RESOURCE_DIR "/opt/openmcu-ru/resource"
+#define SYS_RESOURCE_DIR "/opt/openmcu-10rm/resource"
 // specify server logs folder
-#define SERVER_LOGS "/opt/openmcu-ru/log"
+#define SERVER_LOGS "/opt/openmcu-10rm/log"
 // specify true font directory
-#define TRUETYPE_FONT_DIR "/opt/openmcu-ru/font"
+#define TRUETYPE_FONT_DIR "/opt/openmcu-10rm/font"
 // specify records directory
-#define RECORDS_DIR "/opt/openmcu-ru/records"
+#define RECORDS_DIR "/opt/openmcu-10rm/records"
 // specify certificates directory
-#define SYS_SSL_DIR "/opt/openmcu-ru/ssl"
+#define SYS_SSL_DIR "/opt/openmcu-10rm/ssl"
 
 // enable test rooms for video mixer
 #define ENABLE_TEST_ROOMS   1

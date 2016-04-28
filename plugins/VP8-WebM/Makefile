@@ -25,7 +25,7 @@
 #
 
 VC_PLUGIN_DIR=codecs/video
-prefix=/opt/openmcu-ru/lib/ptlib
+prefix=/opt/openmcu-10rm/lib/ptlib
 exec_prefix=${prefix}
 target_os=linux-gnu
 
@@ -45,8 +45,8 @@ LDSO	 	=-shared -Wl,-soname,$(SONAME)
 PLUGINEXT	=so
 CFLAGS	       +=-g -O2 
 STDCCFLAGS	=-fPIC -D__STDC_CONSTANT_MACROS
-LDFLAGS	       +=-L/opt/openmcu-ru/lib -lavcodec -lavutil -lvpx
-CPPFLAGS       +=-DFFMPEG_DECODER=1 -I/opt/openmcu-ru/include -I/usr/include/vpx/
+LDFLAGS	       +=-L/opt/openmcu-10rm/lib -lavcodec -lavutil -lvpx
+CPPFLAGS       +=-DFFMPEG_DECODER=1 -I/opt/openmcu-10rm/include -I/usr/include/vpx/
 OPTCCFLAGS      =$(CPPFLAGS)
 
 LIBAVCODEC_CFLAGS=-I${prefix}/include -I.

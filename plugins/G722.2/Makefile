@@ -1,5 +1,5 @@
 AC_PLUGIN_DIR=codecs/audio
-prefix=/opt/openmcu-ru/lib/ptlib
+prefix=/opt/openmcu-10rm/lib/ptlib
 target_os=linux-gnu
 
 SONAME          = g7222

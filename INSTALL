@@ -60,4 +60,4 @@ Build on Windows
 Build using Microsoft Visual Studio in the following order:
   * ptlib\ptlib_*.sln
   * h323plus\h323plus_*.sln
-  * openmcu-ru\win\openmcu_*.sln
+  * openmcu-10rm\win\openmcu_*.sln

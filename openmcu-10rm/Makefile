@@ -6,7 +6,7 @@ PREFIX          = /opt
 OSTYPE          = linux
 UNAME          := $(shell uname)
 MACHTYPE	= x86
-PROG		= openmcu-ru
+PROG		= openmcu-10rm
 SOURCES	       := main.cxx video.cxx conference.cxx filemembers.cxx custom.cxx h323.cxx html.cxx mcu.cxx sip.cxx template.cxx \
                    utils.cxx utils_av.cxx utils_list.cxx utils_type.cxx utils_json.cxx yuv.cxx \
                    mcu_rtp.cxx mcu_rtp_cache.cxx mcu_rtp_secure.cxx \
@@ -15,8 +15,8 @@ SOURCES	       := main.cxx video.cxx conference.cxx filemembers.cxx custom.cxx h
 
 CXX		= g++
 CFLAGS         += -g -O2 
-LDFLAGS        += -L../libs/libyuv -L../libs/sofia-sip/libsofia-sip-ua/.libs -L/opt/git/test/libs/h323plus/lib -L/opt/git/test/libs/ptlib/lib -L/opt/lib -L/opt/openmcu-ru/lib -L/usr/lib -L/usr/local/lib
-RFLAGS         += -Wl,-R/opt/openmcu-ru/lib
+LDFLAGS        += -L../libs/libyuv -L../libs/sofia-sip/libsofia-sip-ua/.libs -L/opt/git/test/libs/h323plus/lib -L/opt/git/test/libs/ptlib/lib -L/opt/lib -L/opt/openmcu-10rm/lib -L/usr/lib -L/usr/local/lib
+RFLAGS         += -Wl,-R/opt/openmcu-10rm/lib
 SFLAGS         += 
 SFLAGS_STATIC  +=  -Wl,--start-group /opt/git/test/libs/ptlib/lib/libpt_linux_x86_r_s.a /opt/git/test/libs/h323plus/lib/libh323_linux_x86_r_s.a -Wl,--end-group
 SFLAGS_DEBUG   +=  -Wl,--start-group /opt/git/test/libs/ptlib/lib/libpt_linux_x86_d_s.a /opt/git/test/libs/h323plus/lib/libh323_linux_x86_d_s.a -Wl,--end-group
@@ -25,7 +25,7 @@ LDLIBS_STATIC  +=  -lavcodec -lavutil -lavformat -lswscale -lsofia-sip-ua -lswre
 LDLIBS_DEBUG   +=  -lavcodec -lavutil -lavformat -lswscale -lsofia-sip-ua -lswresample -lfreetype -lyuv -lssl -lsrtp
 STDCCFLAGS     +=  -D__STDC_CONSTANT_MACROS -Wall
 STDCXXFLAGS    += 
-CPPFLAGS       += -I../libs/h323plus/include -I../libs/libyuv/include -I../libs/ptlib/include -I../libs/sofia-sip/libsofia-sip-ua/bnf -I../libs/sofia-sip/libsofia-sip-ua/docs -I../libs/sofia-sip/libsofia-sip-ua/features -I../libs/sofia-sip/libsofia-sip-ua/http -I../libs/sofia-sip/libsofia-sip-ua/ipt -I../libs/sofia-sip/libsofia-sip-ua/iptsec -I../libs/sofia-sip/libsofia-sip-ua/msg -I../libs/sofia-sip/libsofia-sip-ua/nea -I../libs/sofia-sip/libsofia-sip-ua/nta -I../libs/sofia-sip/libsofia-sip-ua/nth -I../libs/sofia-sip/libsofia-sip-ua/nua -I../libs/sofia-sip/libsofia-sip-ua/sdp -I../libs/sofia-sip/libsofia-sip-ua/sip -I../libs/sofia-sip/libsofia-sip-ua/soa -I../libs/sofia-sip/libsofia-sip-ua/sresolv -I../libs/sofia-sip/libsofia-sip-ua/stun -I../libs/sofia-sip/libsofia-sip-ua/su -I../libs/sofia-sip/libsofia-sip-ua/tport -I../libs/sofia-sip/libsofia-sip-ua/url -I/opt/include -I/opt/openmcu-ru/include -I/usr/include -I/usr/include/freetype2 -I/usr/include/srtp/ -I/usr/local/include
+CPPFLAGS       += -I../libs/h323plus/include -I../libs/libyuv/include -I../libs/ptlib/include -I../libs/sofia-sip/libsofia-sip-ua/bnf -I../libs/sofia-sip/libsofia-sip-ua/docs -I../libs/sofia-sip/libsofia-sip-ua/features -I../libs/sofia-sip/libsofia-sip-ua/http -I../libs/sofia-sip/libsofia-sip-ua/ipt -I../libs/sofia-sip/libsofia-sip-ua/iptsec -I../libs/sofia-sip/libsofia-sip-ua/msg -I../libs/sofia-sip/libsofia-sip-ua/nea -I../libs/sofia-sip/libsofia-sip-ua/nta -I../libs/sofia-sip/libsofia-sip-ua/nth -I../libs/sofia-sip/libsofia-sip-ua/nua -I../libs/sofia-sip/libsofia-sip-ua/sdp -I../libs/sofia-sip/libsofia-sip-ua/sip -I../libs/sofia-sip/libsofia-sip-ua/soa -I../libs/sofia-sip/libsofia-sip-ua/sresolv -I../libs/sofia-sip/libsofia-sip-ua/stun -I../libs/sofia-sip/libsofia-sip-ua/su -I../libs/sofia-sip/libsofia-sip-ua/tport -I../libs/sofia-sip/libsofia-sip-ua/url -I/opt/include -I/opt/openmcu-10rm/include -I/usr/include -I/usr/include/freetype2 -I/usr/include/srtp/ -I/usr/local/include
 OPTCCFLAGS      =$(CPPFLAGS)
 
 git_revision        = $(shell git rev-list HEAD --max-count=1)
@@ -71,47 +71,47 @@ debug: $(OBJECTS)
 
 
 install:
-	mkdir -p $(DESTDIR)/opt/openmcu-ru
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/bin
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/config
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/font
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/lib
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/log
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/pipe
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/records
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/resource
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/ssl
-	mkdir -p $(DESTDIR)/opt/openmcu-ru/scripts
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/bin
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/config
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/font
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/lib
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/log
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/pipe
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/records
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/resource
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/ssl
+	mkdir -p $(DESTDIR)/opt/openmcu-10rm/scripts
 	( for file in ./files/conf/*; do \
-	    $(INSTALL) -m 644 $(INSTALL_BACKUP_OPTS) $$file $(DESTDIR)/opt/openmcu-ru/config; \
+	    $(INSTALL) -m 644 $(INSTALL_BACKUP_OPTS) $$file $(DESTDIR)/opt/openmcu-10rm/config; \
 	done )
 	( for file in ./files/font/*; do \
-	    $(INSTALL) -m 644 $$file $(DESTDIR)/opt/openmcu-ru/font; \
+	    $(INSTALL) -m 644 $$file $(DESTDIR)/opt/openmcu-10rm/font; \
 	done )
 	( for file in ./files/resource/*; do \
-	    $(INSTALL) -m 644 $$file $(DESTDIR)/opt/openmcu-ru/resource; \
+	    $(INSTALL) -m 644 $$file $(DESTDIR)/opt/openmcu-10rm/resource; \
 	done )
 	( for file in ./files/scripts/*; do \
-	    $(INSTALL) -m 755 $(INSTALL_BACKUP_OPTS) $$file $(DESTDIR)/opt/openmcu-ru/scripts; \
+	    $(INSTALL) -m 755 $(INSTALL_BACKUP_OPTS) $$file $(DESTDIR)/opt/openmcu-10rm/scripts; \
 	done )
-	$(INSTALL) -m 755 $(OBJDIR)/$(PROG) $(DESTDIR)/opt/openmcu-ru/bin
-#	ln -sf $(DESTDIR)/opt/openmcu-ru/bin/$(PROG) /usr/local/bin/$(PROG)
-	$(INSTALL) -m 644 ../AUTHORS $(DESTDIR)/opt/openmcu-ru
-	$(INSTALL) -m 644 ../COPYING $(DESTDIR)/opt/openmcu-ru
-	$(INSTALL) -m 644 ../NEWS $(DESTDIR)/opt/openmcu-ru
-	$(INSTALL) -m 644 ../README $(DESTDIR)/opt/openmcu-ru
+	$(INSTALL) -m 755 $(OBJDIR)/$(PROG) $(DESTDIR)/opt/openmcu-10rm/bin
+#	ln -sf $(DESTDIR)/opt/openmcu-10rm/bin/$(PROG) /usr/local/bin/$(PROG)
+	$(INSTALL) -m 644 ../AUTHORS $(DESTDIR)/opt/openmcu-10rm
+	$(INSTALL) -m 644 ../COPYING $(DESTDIR)/opt/openmcu-10rm
+	$(INSTALL) -m 644 ../NEWS $(DESTDIR)/opt/openmcu-10rm
+	$(INSTALL) -m 644 ../README $(DESTDIR)/opt/openmcu-10rm
 
 uninstall:
-	rm -rf $(DESTDIR)/opt/openmcu-ru/font
-	rm -rf $(DESTDIR)/opt/openmcu-ru/log
-	rm -rf $(DESTDIR)/opt/openmcu-ru/pipe
-	rm -rf $(DESTDIR)/opt/openmcu-ru/resource
-	rm -rf $(DESTDIR)/opt/openmcu-ru/scripts
-	rm -f $(DESTDIR)/opt/openmcu-ru/AUTHORS
-	rm -f $(DESTDIR)/opt/openmcu-ru/COPYING
-	rm -f $(DESTDIR)/opt/openmcu-ru/NEWS
-	rm -f $(DESTDIR)/opt/openmcu-ru/README
-	rm -f $(DESTDIR)/opt/openmcu-ru/bin/$(PROG)
+	rm -rf $(DESTDIR)/opt/openmcu-10rm/font
+	rm -rf $(DESTDIR)/opt/openmcu-10rm/log
+	rm -rf $(DESTDIR)/opt/openmcu-10rm/pipe
+	rm -rf $(DESTDIR)/opt/openmcu-10rm/resource
+	rm -rf $(DESTDIR)/opt/openmcu-10rm/scripts
+	rm -f $(DESTDIR)/opt/openmcu-10rm/AUTHORS
+	rm -f $(DESTDIR)/opt/openmcu-10rm/COPYING
+	rm -f $(DESTDIR)/opt/openmcu-10rm/NEWS
+	rm -f $(DESTDIR)/opt/openmcu-10rm/README
+	rm -f $(DESTDIR)/opt/openmcu-10rm/bin/$(PROG)
 #	rm -f /usr/local/bin/$(PROG)
 
 clean:

@@ -1,4 +1,4 @@
-window.l_welcome = 'OpenMCU-ru';
+window.l_welcome = 'OpenMCU-10RM';
 window.l_status = 'Estado';
 
 window.l_connections = 'Conexões';
@@ -69,10 +69,10 @@ window.l_support = 'Suporte';
 
 window.l_info_welcome ='\
 <p>\
-O serviço OpenMCU-ru está a funcionar e a aceitar conexões.\
+O serviço OpenMCU-10RM está a funcionar e a aceitar conexões.\
 </p>\
 <p>\
-Conferência iniciada a partir de algum terminal irá funcionar no modo não controlado. Todos os participantes irão receber a mesma imagem. No modo não controlado, OpenMCU-ru trocará o layout automaticamente a depender do número de participantes na conferência na ordem determinada no ficheiro "layouts.conf". Depois de atingir 100 participantes os próximos não serão vistos mas verão os outros.<br />\
+Conferência iniciada a partir de algum terminal irá funcionar no modo não controlado. Todos os participantes irão receber a mesma imagem. No modo não controlado, OpenMCU-10rm trocará o layout automaticamente a depender do número de participantes na conferência na ordem determinada no ficheiro "layouts.conf". Depois de atingir 100 participantes os próximos não serão vistos mas verão os outros.<br />\
 O áudio está em modo não controlado, recebendo e transmitindo para todos os participantes.<br />\
 </p>\
 <p>\
@@ -254,7 +254,7 @@ window.l_name_auto_record_stop         = 'Auto record (stop)';
 ///
 window.l_restore_defaults                          = "RESTORE DEFAULTS";
 window.l_language                                  = "Language";
-window.l_server_id                                 = "OpenMCU-ru Server Id";
+window.l_server_id                                 = "OpenMCU-10rm Server Id";
 window.l_default_protocol_for_outgoing_calls       = "Default protocol for outgoing calls";
 window.l_http_secure                               = "HTTP secure";
 window.l_http_certificate                          = "HTTP certificate";

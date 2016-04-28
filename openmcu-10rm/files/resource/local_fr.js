@@ -1,4 +1,4 @@
-window.l_welcome = 'OpenMCU-ru';
+window.l_welcome = 'OpenMCU-10rm';
 window.l_status = 'Statut';
 
 window.l_connections = 'Connexions';
@@ -69,10 +69,10 @@ window.l_support = 'Support';
 
 window.l_info_welcome ='\
 <p>\
-Le service OpenMCU-ru est lancé et accepte les connexions\
+Le service OpenMCU-10rm est lancé et accepte les connexions\
 </p>\
 <p>\
-Une conférence initiée par un terminal fonctionnera en mode non managé. Tous les membres verront la même image. En mode non managé OpenMCU-ru change automatiquement la disposition en fonction du nombre de membres dans la conférence, dans l\'ordre défini dans le fichier "layouts.conf". Seuls les 100 premiers membres d\'une conférence seront visibles.<br/>\
+Une conférence initiée par un terminal fonctionnera en mode non managé. Tous les membres verront la même image. En mode non managé OpenMCU-10rm change automatiquement la disposition en fonction du nombre de membres dans la conférence, dans l\'ordre défini dans le fichier "layouts.conf". Seuls les 100 premiers membres d\'une conférence seront visibles.<br/>\
 En mode non managé, le flux audio est transmis vers et depuis tous les membres connectés<br/>\
 </p>\
 <p>\
@@ -254,7 +254,7 @@ window.l_name_auto_record_stop         = 'Auto record (stop)';
 ///
 window.l_restore_defaults                          = "RESTORE DEFAULTS";
 window.l_language                                  = "Language";
-window.l_server_id                                 = "OpenMCU-ru Server Id";
+window.l_server_id                                 = "OpenMCU-10rm Server Id";
 window.l_default_protocol_for_outgoing_calls       = "Default protocol for outgoing calls";
 window.l_http_secure                               = "HTTP secure";
 window.l_http_certificate                          = "HTTP certificate";

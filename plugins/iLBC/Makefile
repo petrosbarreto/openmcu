@@ -63,7 +63,7 @@
 #
 #
 AC_PLUGIN_DIR=codecs/audio
-prefix=/opt/openmcu-ru/lib/ptlib
+prefix=/opt/openmcu-10rm/lib/ptlib
 exec_prefix = ${prefix}
 
 SONAME	= ilbccodec

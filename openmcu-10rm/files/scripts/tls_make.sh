@@ -2,8 +2,8 @@
 
 CA_PATH="./CA"
 SSL_PATH="../ssl"
-COMMON_NAME="OpenMCU-ru"
-ORG_NAME="OpenMCU-ru"
+COMMON_NAME="STI10"
+ORG_NAME="10RM"
 
 echo "
   [ req ]
@@ -37,7 +37,7 @@ echo "
   basicConstraints=CA:TRUE
   subjectKeyIdentifier=hash
   authorityKeyIdentifier=keyid,issuer:always
-  nsComment=\"OpenMCU-ru agent certificate\"
+  nsComment=\"OpenMCU-10rm agent certificate\"
   nsCertType=server
   extendedKeyUsage=serverAuth
 

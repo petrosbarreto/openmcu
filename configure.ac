@@ -1,12 +1,12 @@
 dnl #######################################################################
 dnl INIT
 
-AC_INIT([OpenMCU-ru],[4.0],[OpenMCU-ru])
+AC_INIT([OpenMCU-10rm],[4.0],[OpenMCU-10rm])
 AC_CANONICAL_TARGET()
 AM_INIT_AUTOMAKE()
 
-AC_SUBST(PRODUCT, OpenMCU-ru)
-AC_SUBST(PROG, openmcu-ru)
+AC_SUBST(PRODUCT, OpenMCU-10rm)
+AC_SUBST(PROG, openmcu-10rm)
 
 AC_LANG(C++)
 
@@ -197,11 +197,11 @@ if test "${USE_GCC}" = "yes"; then
 fi
 
 dnl ########################################################################
-dnl OpenMCU-ru version
+dnl OpenMCU-10rm version
 
-MCU_MAJOR_VERSION=`cat openmcu-ru/version.h | grep MAJOR_VERSION | cut -f3 -d' '`
-MCU_MINOR_VERSION=`cat openmcu-ru/version.h | grep MINOR_VERSION | cut -f3 -d' '`
-MCU_BUILD_NUMBER=`cat openmcu-ru/version.h | grep BUILD_NUMBER | cut -f3 -d' '`
+MCU_MAJOR_VERSION=`cat openmcu-10rm/version.h | grep MAJOR_VERSION | cut -f3 -d' '`
+MCU_MINOR_VERSION=`cat openmcu-10rm/version.h | grep MINOR_VERSION | cut -f3 -d' '`
+MCU_BUILD_NUMBER=`cat openmcu-10rm/version.h | grep BUILD_NUMBER | cut -f3 -d' '`
 MCU_VERSION=$MAJOR_VERSION.$MINOR_VERSION.$BUILD_NUMBER
 AC_SUBST(MCU_MAJOR_VERSION)
 AC_SUBST(MCU_MINOR_VERSION)
@@ -209,7 +209,7 @@ AC_SUBST(MCU_BUILD_NUMBER)
 AC_SUBST(MCU_VERSION)
 
 dnl ########################################################################
-dnl configuration openmcu-ru
+dnl configuration openmcu-10rm
 
 AC_ARG_WITH(separator,[  ])
 AC_ARG_WITH(config_prefix, [AS_HELP_STRING([--with-config-prefix],[config directory prefix],[40],[100])], [config_prefix=$withval])
@@ -217,7 +217,7 @@ AC_ARG_WITH(log_prefix, [AS_HELP_STRING([--with-log-prefix],[log directory prefi
 AC_ARG_WITH(pipe_prefix, [AS_HELP_STRING([--with-pipe-prefix],[pipe directory prefix],[40],[100])], [pipe_prefix=$withval])
 AC_ARG_WITH(records_prefix, [AS_HELP_STRING([--with-records-prefix],[records directory prefix],[40],[100])], [records_prefix=$withval])
 
-MCUDIR=openmcu-ru
+MCUDIR=openmcu-10rm
 MCU_DIR=${INSTALLPREFIX}/${MCUDIR}
 MCU_BIN_DIR=${MCU_DIR}/bin
 MCU_FONT_DIR=${MCU_DIR}/font
@@ -261,8 +261,8 @@ AC_SUBST(MCU_RECORDS_DIR)
 AC_SUBST(MCU_RESOURCE_DIR)
 AC_SUBST(MCU_SSL_DIR)
 
-AC_CONFIG_FILES(openmcu-ru/Makefile)
-AC_CONFIG_FILES(openmcu-ru/config.h)
+AC_CONFIG_FILES(openmcu-10rm/Makefile)
+AC_CONFIG_FILES(openmcu-10rm/config.h)
 
 dnl ########################################################################
 dnl configuration ptlib/h323plus
