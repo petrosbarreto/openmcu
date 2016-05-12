@@ -121,7 +121,7 @@ X264EncoderContext::X264EncoderContext()
   X264_PARAM_DEFAULT_PRESET( &_context, preset, tune );
   free(preset); free(tune);
 
-  X264_PARAM_PARSE(&_context,"slice-max-size","2048");
+  X264_PARAM_PARSE(&_context,"slice-max-size","16384");
   X264_PARAM_PARSE(&_context,"intra-refresh","1");
   X264_PARAM_PARSE(&_context,"keyint","125");
 
