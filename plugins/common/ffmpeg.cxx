@@ -69,7 +69,7 @@ static void logCallbackFFMPEG(void * avcl, int severity, const char* fmt , va_li
   if (level > 1 && !PTRACE_CHECK(level))
     return;
 
-  char buffer[512];
+  char buffer[1024];
   int len = vsnprintf(buffer, sizeof(buffer), fmt, arg);
   if (len <= 0)
     return;
